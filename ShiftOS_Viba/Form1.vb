@@ -2,6 +2,7 @@
     Dim RandomNum As Random
     Dim FixedNum As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ShiftEngine.CheckSave("Main Menu")
         DoTips()
         marqueetimer.Start()
     End Sub
@@ -31,5 +32,15 @@
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
+    End Sub
+
+    Private Sub CampaignButton_Click(sender As Object, e As EventArgs) Handles CampaignButton.Click
+        CampaignPanel.Location = New Point((Width - CampaignPanel.Width) / 2, (Height - CampaignPanel.Height) / 2)
+        CampaignPanel.Visible = True
+    End Sub
+
+    Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
+        CampaignPanel.Visible = False
+        CampaignPanel.Location = New Point(12, 207)
     End Sub
 End Class

@@ -31,11 +31,11 @@ Partial Class Form1
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.marqueetimer = New System.Windows.Forms.Timer(Me.components)
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.NewGameButton = New System.Windows.Forms.Button()
+        Me.CampaignPanel = New System.Windows.Forms.Panel()
+        Me.BackButton = New System.Windows.Forms.Button()
         Me.ContinueButton = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
+        Me.NewGameButton = New System.Windows.Forms.Button()
+        Me.CampaignPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -53,7 +53,7 @@ Partial Class Form1
         '
         Me.CampaignButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CampaignButton.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CampaignButton.Location = New System.Drawing.Point(230, 136)
+        Me.CampaignButton.Location = New System.Drawing.Point(230, 146)
         Me.CampaignButton.Name = "CampaignButton"
         Me.CampaignButton.Size = New System.Drawing.Size(180, 30)
         Me.CampaignButton.TabIndex = 1
@@ -64,7 +64,7 @@ Partial Class Form1
         '
         Me.SandboxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SandboxButton.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SandboxButton.Location = New System.Drawing.Point(230, 172)
+        Me.SandboxButton.Location = New System.Drawing.Point(230, 182)
         Me.SandboxButton.Name = "SandboxButton"
         Me.SandboxButton.Size = New System.Drawing.Size(180, 30)
         Me.SandboxButton.TabIndex = 2
@@ -75,7 +75,7 @@ Partial Class Form1
         '
         Me.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SettingsButton.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SettingsButton.Location = New System.Drawing.Point(230, 208)
+        Me.SettingsButton.Location = New System.Drawing.Point(230, 218)
         Me.SettingsButton.Name = "SettingsButton"
         Me.SettingsButton.Size = New System.Drawing.Size(180, 30)
         Me.SettingsButton.TabIndex = 3
@@ -86,7 +86,7 @@ Partial Class Form1
         '
         Me.AboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AboutButton.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AboutButton.Location = New System.Drawing.Point(230, 244)
+        Me.AboutButton.Location = New System.Drawing.Point(230, 254)
         Me.AboutButton.Name = "AboutButton"
         Me.AboutButton.Size = New System.Drawing.Size(180, 30)
         Me.AboutButton.TabIndex = 4
@@ -97,7 +97,7 @@ Partial Class Form1
         '
         Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExitButton.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExitButton.Location = New System.Drawing.Point(230, 280)
+        Me.ExitButton.Location = New System.Drawing.Point(230, 290)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(180, 30)
         Me.ExitButton.TabIndex = 5
@@ -118,48 +118,49 @@ Partial Class Form1
         'marqueetimer
         '
         '
-        'Panel1
+        'CampaignPanel
         '
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.ContinueButton)
-        Me.Panel1.Controls.Add(Me.NewGameButton)
-        Me.Panel1.Location = New System.Drawing.Point(12, 108)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(248, 232)
-        Me.Panel1.TabIndex = 7
+        Me.CampaignPanel.Controls.Add(Me.BackButton)
+        Me.CampaignPanel.Controls.Add(Me.ContinueButton)
+        Me.CampaignPanel.Controls.Add(Me.NewGameButton)
+        Me.CampaignPanel.Location = New System.Drawing.Point(12, 207)
+        Me.CampaignPanel.Name = "CampaignPanel"
+        Me.CampaignPanel.Size = New System.Drawing.Size(248, 232)
+        Me.CampaignPanel.TabIndex = 7
+        Me.CampaignPanel.Visible = False
         '
-        'NewGameButton
+        'BackButton
         '
-        Me.NewGameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.NewGameButton.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NewGameButton.Location = New System.Drawing.Point(34, 17)
-        Me.NewGameButton.Name = "NewGameButton"
-        Me.NewGameButton.Size = New System.Drawing.Size(180, 30)
-        Me.NewGameButton.TabIndex = 8
-        Me.NewGameButton.Text = "New Game"
-        Me.NewGameButton.UseVisualStyleBackColor = True
+        Me.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BackButton.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackButton.Location = New System.Drawing.Point(34, 134)
+        Me.BackButton.Name = "BackButton"
+        Me.BackButton.Size = New System.Drawing.Size(180, 30)
+        Me.BackButton.TabIndex = 10
+        Me.BackButton.Text = "Back"
+        Me.BackButton.UseVisualStyleBackColor = True
         '
         'ContinueButton
         '
         Me.ContinueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ContinueButton.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ContinueButton.Location = New System.Drawing.Point(34, 101)
+        Me.ContinueButton.Location = New System.Drawing.Point(34, 96)
         Me.ContinueButton.Name = "ContinueButton"
         Me.ContinueButton.Size = New System.Drawing.Size(180, 30)
         Me.ContinueButton.TabIndex = 9
         Me.ContinueButton.Text = "Continue"
         Me.ContinueButton.UseVisualStyleBackColor = True
         '
-        'Button1
+        'NewGameButton
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(34, 187)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(180, 30)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Continue"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.NewGameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NewGameButton.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewGameButton.Location = New System.Drawing.Point(34, 59)
+        Me.NewGameButton.Name = "NewGameButton"
+        Me.NewGameButton.Size = New System.Drawing.Size(180, 30)
+        Me.NewGameButton.TabIndex = 8
+        Me.NewGameButton.Text = "New Game"
+        Me.NewGameButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -167,7 +168,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(16, Byte), Integer), CType(CType(16, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(634, 451)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.CampaignPanel)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.AboutButton)
@@ -181,7 +182,7 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main Menu"
-        Me.Panel1.ResumeLayout(False)
+        Me.CampaignPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -195,8 +196,8 @@ Partial Class Form1
     Friend WithEvents ExitButton As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents marqueetimer As Timer
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents CampaignPanel As Panel
     Friend WithEvents NewGameButton As Button
     Friend WithEvents ContinueButton As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BackButton As Button
 End Class
